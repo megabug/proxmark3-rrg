@@ -2416,6 +2416,7 @@ int iso14443a_select_card(uint8_t *uid_ptr, iso14a_card_select_t *p_card, uint32
         p_card->sak = sak;
     }
 
+    iso14_pcb_blocknum = 0;
     // PICC compilant with iso14443a-4 ---> (SAK & 0x20 != 0)
     if ((sak & 0x20) == 0) return 2;
 

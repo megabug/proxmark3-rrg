@@ -1497,9 +1497,9 @@ int infoHF14A(bool verbose, bool do_nack_test) {
         PrintAndLogEx(INFO, "proprietary non iso14443-4 card found, RATS not supported");
     }
 
-    detect_classic_magic();
+    //detect_classic_magic();
 
-    if (isMifareClassic) {
+    if (0 && isMifareClassic) {
         int res = detect_classic_prng();
         if (res == 1)
             PrintAndLogEx(SUCCESS, "Prng detection: " _GREEN_("WEAK"));
